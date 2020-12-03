@@ -11,8 +11,8 @@ module OpenWeather
             return get_response(params)
         end
 
-        def self.by_coords(lat, lon)
-           params = { :lat => lat, :lon => lon, :appid => ENV['API_KEY']}
+        def self.by_coords(latitude, longitude)
+           params = { :lat => latitude, :lon => latitude, :appid => ENV['API_KEY']}
 
            return get_response(params)
         end
