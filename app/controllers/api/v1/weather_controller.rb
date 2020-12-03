@@ -1,16 +1,15 @@
 class Api::V1::WeatherController < ApplicationController
-    def
-        get_weather
-        render :json => get_weather_helper
+    def get_weather
+        render :json => get_weather_helper(weather_params[:latitude], weather_params[:longitude])
     end
 
     private
     
-    def get_weather_helper
-        return OpenWeather::GetWeather.by_coords(33.748997, -84.387985)
+    def get_weather_helper(latitude, longitude)
+        return OpenWeather::GetWeather.by_coords(latitude, longitude)
     end
 
     def weather_params
-        params.require(:coords).permit(:longitude, :latitude)
+        params.require(:coords).permit(:latitude, :longitude)
     end
 end
