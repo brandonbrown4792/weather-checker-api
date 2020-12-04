@@ -1,6 +1,6 @@
 # Weather Checker API
 
-This is a simple weather checker backend application sends a weather data response given an input of a persons coordinates.
+This is a simple weather checker backend application built to supply weather data from an input of geographical coordinates.
 
 ## Install Instructions
 1. Clone this repository to you local machine.
