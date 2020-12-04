@@ -1,6 +1,6 @@
 class Api::V1::WeatherController < ApplicationController
     def get_weather
-        render :json => get_weather_helper(weather_params[:latitude], weather_params[:longitude])
+        render :json => get_weather_helper(weather_params[:latitude], weather_params[:longitude]), :status => :ok
     end
 
     private
